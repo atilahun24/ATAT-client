@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>ATAT</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,62 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1>ATAT</h1>
+
+  <h2 id="message"></h2>
+
+  <div id = "sign-up2">
+  <h2> Sign Up! </h2>
+  <form id="sign-up">
+    <input type="email" name="credentials[email]" placeholder="Enter Email" />
+    <input type="password" name="credentials[password]" placeholder="Enter a Password" />
+    <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Your Password" />
+    <input type="submit" value="Sign Up" />
+  </form>
+</body>
+</div>
+
+<div id="sign-in2">
+  <h2> Sign In </h2>
+  <form id="sign-in">
+    <input type="email" name="credentials[email]" placeholder="Enter Email" />
+    <input type="password" name="credentials[password]" placeholder="Enter a Password" />
+    <input type="submit" value="Sign In" />
+  </form>
+</div>
+
+  <div id ="change-pw2" class = "hidden">
+  <h2>Change Password</h2>
+  <form id="change-pw">
+    <input type="password" name="passwords[old]" placeholder="Old Password" />
+    <input type="password" name="passwords[new]" placeholder="New Password" />
+    <input type="submit" value="Change Password" />
+  </form>
+  </div>
+
+  <div id = "sign-out2" class = "hidden">
+  <h2> Sign Out </h2>
+  <form id="sign-out">
+    <input type="submit" value="Sign Out 👋" />
+  </form>
+</div>
+
+  <div class ="addArtist hidden" id="hideAddArtist">
+    <form id ="create">
+      <input type="text" name="Name" placeholder="Artist Name" />
+      <input type="text" name="Genre" placeholder="Genre" />
+      <input type="submit" value="Add New Artist" />
+    </form>
+  </div>
+
+  <div class ="getArtists hidden" id="getAllArtists">
+    <form id ="getArtists">
+      <input type="submit" value="Get All Artists" />
+    </form>
+  </div>
+
+<footer>
+  <p>Created by Andre W. Tilahun for GA SEI2 course.</p>
+</footer>
     </body>
 </html>
