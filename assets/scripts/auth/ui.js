@@ -4,30 +4,30 @@ const store = require('../store.js')
 
 const onSignUpSuccess = responseData => {
   // console.log('success', responseData)
-  $('#message').removeClass('hidden')
+  // $('#message').removeClass('hidden')
   $('#message').text('You have successfully signed up!')
-  $('form').trigger('reset')
-  $('#sign-up2').addClass('hidden')
+  // $('form').trigger('reset')
+  // $('#sign-up2').addClass('hidden')
 }
 
 const onSignUpFailure = responseData => {
   // console.log('failure', responseData)
-  $('#message').removeClass('hidden')
+  // $('#message').removeClass('hidden')
   $('#message').text('Sign up failed :( ')
-  $('form').trigger('reset')
+  // $('form').trigger('reset')
 }
 
 const onSignInSuccess = responseData => {
   // console.log('success', responseData)
-  $('#createForHide').removeClass('hidden')
+  // $('#createForHide').removeClass('hidden')
   $('#message').removeClass('hidden')
   $('#message').text("You're in! Welcome!")
-  $('#sign-out2').removeClass('hidden')
-  $('#change-pw2').removeClass('hidden')
+  // $('#sign-out2').removeClass('hidden')
+  // $('#change-pw2').removeClass('hidden')
   // $('#wholeContainer').removeClass('hidden')
-  $('#getAllGames').removeClass('hidden')
-  $('#sign-in2').addClass('hidden')
-  $('#sign-up2').addClass('hidden')
+  // $('#getAllGames').removeClass('hidden')
+  // $('#sign-in2').addClass('hidden')
+  // $('#sign-up2').addClass('hidden')
   $('form').trigger('reset')
   // whenever we sign in successfully, the user is returned in the response so we store it
   // for any of our authenticated API calls
