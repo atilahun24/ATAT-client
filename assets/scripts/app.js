@@ -16,4 +16,7 @@ $(() => {
   $('#sign-out').on('submit', authEvents.onSignOut)
   $('#create').on('submit', artistEvents.onAddNewArtist)
   $('#getArtists').on('click', artistEvents.onGetAllArtists)
+  // $('#artistsList').on('click', artistEvents.onDeleteArtist)
+  $('#artistList').on('click', '.remove-artist', artistEvents.onDeleteArtist)
+  $('#artistList').on('submit', '.update-artist', artistEvents.onUpdateArtist)
 })

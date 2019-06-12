@@ -1,1 +1,42 @@
 @import '~bootstrap/scss/bootstrap';
+
+body {
+  background-image: url(https://cdn-images-1.medium.com/max/2600/0*o1QU-7dhjuNPNZUq.);
+  display: cover;
+}
+
+footer {
+  text-align: center;
+  margin-top: 100px;
+  color: white
+}
+
+h3 {
+  text-align: center;
+  margin: 40px;
+  color: white;
+  font-size: 75px
+}
+
+.addArtist {
+  text-align: center;
+  margin-top: 40px;
+  // text-decoration-color: green
+}
+
+.container {
+  color: white;
+}
+
+.getArtists {
+  text-align: center;
+  padding: 20px;
+}
+
+#sign-up2,
+#sign-in2,
+#change-pw2,
+#sign-out2 {
+  text-align: center;
+  color: white;
+}

@@ -25,12 +25,35 @@ const getAllArtists = function () {
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token
-    },
-    data: '{}'
+    }
+  })
+}
+
+const deleteArtist = function (id) {
+  return $.ajax({
+    url: config.apiUrl + '/artists/' + id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
+const updateArtist = (id, formData) => {
+  console.log('api update check')
+  return $.ajax({
+    url: config.apiUrl + '/artists/' + id,
+    method: 'PATCH',
+    data: formData,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
   })
 }
 
 module.exports = {
   addNewArtist,
-  getAllArtists
+  getAllArtists,
+  deleteArtist,
+  updateArtist
 }

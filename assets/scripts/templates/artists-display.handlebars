@@ -1,0 +1,19 @@
+<div class="container">
+   <h2>Artists: </h2>
+   <ul id="Artists">
+   {{#each artists as |artist|}}
+     <li>
+       <h4>{{artist.name}}</h4>
+       Genre: {{artist.genre}} </em>
+     </li>
+    <button class="btn btn-danger remove-artist" data-id="{{artist.id}}"> Remove Artist</button>
+    <div id ="update-artist">
+    <form id="update" class="update-artist" data-id="{{artist.id}}">
+      <input type="name" name="artist[name]" placeholder="Updated Name" />
+      <input type="genre" name="artist[genre]" placeholder="Updated Genre" />
+      <button class="btn btn-danger update-artist" data-id="{{artist.id}}"> Update Artist</button>
+    </form>
+    </div>
+   {{/each}}
+   </ul>
+</div>
