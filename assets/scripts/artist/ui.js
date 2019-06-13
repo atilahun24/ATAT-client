@@ -11,6 +11,7 @@ const getAllArtistsSuccess = function (responseData) {
 
 const addNewArtistSuccess = function (responseData) {
   $('#message').text("You've added " + responseData.artist.name + ' to your favorite artists!')
+  $('form').trigger('reset')
 }
 
 module.exports = {

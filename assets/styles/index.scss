@@ -2,6 +2,7 @@
 
 body {
   background-image: url(https://cdn-images-1.medium.com/max/2600/0*o1QU-7dhjuNPNZUq.);
+  background-size: cover;
   display: cover;
 }
 
@@ -11,11 +12,19 @@ footer {
   color: white
 }
 
+h1 {
+
+}
+
 h3 {
   text-align: center;
   margin: 40px;
   color: white;
-  font-size: 75px
+  font-size: 75px;
+  // border-style: double;
+  box-sizing: border-box;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  // text-shadow: 0 0 2px #000;
 }
 
 .addArtist {
@@ -33,10 +42,37 @@ h3 {
   padding: 20px;
 }
 
+#message {
+  text-align: center;
+  color: green;
+}
+
+.remove-artist {
+  margin: 5px;
+}
+
+#artist {
+  align: center;
+  margin: 8px;
+}
+
+#artistList {
+  text-align: center;
+  align: center;
+}
+
+#logo {
+  text-align: center;
+}
+
 #sign-up2,
 #sign-in2,
 #change-pw2,
 #sign-out2 {
   text-align: center;
   color: white;
+}
+
+#update-artist {
+  margin: 5px;
 }

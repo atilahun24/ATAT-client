@@ -10,7 +10,7 @@ const onAddNewArtist = event => {
   const form = event.target
   const formData = getFormFields(form)
 
-  console.log('add artist pressed', formData)
+  // console.log('add artist pressed', formData)
   api.addNewArtist(formData)
     .then(ui.addNewArtistSuccess)
     .catch(ui.addNewArtistFailure)

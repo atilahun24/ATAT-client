@@ -4,30 +4,32 @@ const store = require('../store.js')
 
 const onSignUpSuccess = responseData => {
   // console.log('success', responseData)
-  // $('#message').removeClass('hidden')
+  $('#message').removeClass('d-none')
   $('#message').text('You have successfully signed up!')
-  // $('form').trigger('reset')
-  // $('#sign-up2').addClass('hidden')
+  $('form').trigger('reset')
+  $('#sign-up2').addClass('d-none')
 }
 
 const onSignUpFailure = responseData => {
   // console.log('failure', responseData)
-  // $('#message').removeClass('hidden')
+  $('#message').removeClass('d-none')
   $('#message').text('Sign up failed :( ')
-  // $('form').trigger('reset')
+  $('form').trigger('reset')
 }
 
 const onSignInSuccess = responseData => {
+  $('#getAllArtists').removeClass('d-none')
+  $('#hideAddArtist').removeClass('d-none')
+  $('#artistList').removeClass('d-none')
   // console.log('success', responseData)
-  // $('#createForHide').removeClass('hidden')
-  $('#message').removeClass('hidden')
+  // $('#createForHide').removeClass('d-none')
+  $('#message').removeClass('d-none')
   $('#message').text("You're in! Welcome!")
-  // $('#sign-out2').removeClass('hidden')
-  // $('#change-pw2').removeClass('hidden')
-  // $('#wholeContainer').removeClass('hidden')
-  // $('#getAllGames').removeClass('hidden')
-  // $('#sign-in2').addClass('hidden')
-  // $('#sign-up2').addClass('hidden')
+  $('#sign-out2').removeClass('d-none')
+  $('#change-pw2').removeClass('d-none')
+  $('#getArtists').removeClass('d-none')
+  $('#sign-in2').addClass('d-none')
+  $('#sign-up2').addClass('d-none')
   $('form').trigger('reset')
   // whenever we sign in successfully, the user is returned in the response so we store it
   // for any of our authenticated API calls
@@ -39,14 +41,14 @@ const onSignInSuccess = responseData => {
 
 const onSignInFailure = responseData => {
   // console.log('failure', responseData)
-  $('#message').html('<img src="public/giphy-2.gif" alt="a">')
-  $('#message').removeClass('hidden')
+  $('#message').text('Sign in failed. Try Again!')
+  $('#message').removeClass('d-none')
   $('#message').addClass('failure')
   $('form').trigger('reset')
 }
 
 const onChangePasswordSuccess = () => {
-  $('#message').text('changed password successfully!')
+  $('#message').text('Changed password successfully!')
   // $('#message').removeClass()
   $('#message').addClass('success')
   $('form').trigger('reset')
@@ -60,17 +62,18 @@ const onChangePasswordFailure = () => {
 }
 
 const onSignOutSuccess = () => {
-  $('#message').text('Hate to see you go :/')
-  setTimeout(() => $('#message').addClass('hidden'), 2500)
-  $('#sign-out2').addClass('hidden')
-  $('#change-pw2').addClass('hidden')
-  $('#wholeContainer').addClass('hidden')
-  $('#createForHide').addClass('hidden')
-  $('#notification').addClass('hidden')
-  $('#getAllGames').addClass('hidden')
-  $('#sign-in2').removeClass('hidden')
-  $('#sign-up2').removeClass('hidden')
-  $('#endMessage').addClass('hidden')
+  $('#getAllArtists').addClass('d-none')
+  $('#hideAddArtist').addClass('d-none')
+  $('#artistList').addClass('d-none')
+  $('#message').text('Goodbye for now 👋')
+  setTimeout(() => $('#message').addClass('d-none'), 2500)
+  $('#sign-out2').addClass('d-none')
+  $('#change-pw2').addClass('d-none')
+  $('#createForHide').addClass('d-none')
+  $('#notification').addClass('d-none')
+  $('#sign-in2').removeClass('d-none')
+  $('#sign-up2').removeClass('d-none')
+  $('#endMessage').addClass('d-none')
 }
 
 const onSignOutFailure = () => {
