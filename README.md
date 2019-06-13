@@ -5,6 +5,8 @@ user stories:
 3. as a developer, I want to create a functional app
 4. as a client, I want a bug-free, reliable app
 
-wireframe:
+wireframe: https://imgur.com/8KQoypK
 
-https://imgur.com/8KQoypK
+link: https://atilahun24.github.io/ATAT-client/
+
+heroku link: https://infinite-refuge-46808.herokuapp.com/
