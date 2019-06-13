@@ -65,6 +65,7 @@ const onSignOutSuccess = () => {
   $('#getAllArtists').addClass('d-none')
   $('#hideAddArtist').addClass('d-none')
   $('#artistList').addClass('d-none')
+  $('#artistList').html('')
   $('#message').text('Goodbye for now 👋')
   setTimeout(() => $('#message').addClass('d-none'), 2500)
   $('#sign-out2').addClass('d-none')

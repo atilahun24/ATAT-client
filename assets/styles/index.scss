@@ -27,6 +27,11 @@ h3 {
   // text-shadow: 0 0 2px #000;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+}
+
 .addArtist {
   text-align: center;
   margin-top: 40px;
@@ -40,6 +45,7 @@ h3 {
 .getArtists {
   text-align: center;
   padding: 20px;
+  // overflow: auto;
 }
 
 #message {
