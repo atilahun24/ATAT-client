@@ -4,7 +4,7 @@ const showArtistsTemplate = require('../templates/artists-display.handlebars')
 
 const getAllArtistsSuccess = function (responseData) {
   $('#artistList').text(JSON.stringify(responseData.artists))
-  console.log(responseData)
+  //console.log(responseData)
   const showArtistsHtml = showArtistsTemplate({ artists: responseData.artists })
   $('#artistList').html(showArtistsHtml)
 }

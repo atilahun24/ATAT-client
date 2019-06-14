@@ -2,9 +2,9 @@ const config = require('../config.js')
 const store = require('../store')
 
 const addNewArtist = formData => {
-  console.log('from api newArtist')
-  console.log(store.user.token)
-  console.log(formData.artist)
+  //console.log('from api newArtist')
+  //console.log(store.user.token)
+  //console.log(formData.artist)
 
   return $.ajax({
     url: config.apiUrl + '/artists',
@@ -18,7 +18,7 @@ const addNewArtist = formData => {
 }
 
 const getAllArtists = function () {
-  console.log('from api getArtists')
+  //console.log('from api getArtists')
 
   return $.ajax({
     url: config.apiUrl + '/artists/',
@@ -40,7 +40,7 @@ const deleteArtist = function (id) {
 }
 
 const updateArtist = (id, formData) => {
-  console.log('api update check')
+  //console.log('api update check')
   return $.ajax({
     url: config.apiUrl + '/artists/' + id,
     method: 'PATCH',
