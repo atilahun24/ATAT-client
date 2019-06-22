@@ -4,7 +4,8 @@ const store = require('../store.js')
 
 const onSignUpSuccess = responseData => {
   // console.log('success', responseData)
-  $('#message').removeClass('d-none')
+  $('#message').removeClass('d-none alert-success alert-danger')
+  // $('#message').removeClass('d-none')
   $('#message').text('You have successfully signed up!')
   $('form').trigger('reset')
   $('#sign-up2').addClass('d-none')
@@ -12,8 +13,9 @@ const onSignUpSuccess = responseData => {
 
 const onSignUpFailure = responseData => {
   // console.log('failure', responseData)
-  $('#message').removeClass('d-none')
-  $('#message').text('Sign up failed :( ')
+  $('#message').removeClass('d-none alert-success alert-danger')
+  // $('#message').removeClass('d-none')
+  $('#message').text('Sign up failed :( ').addClass('alert-danger')
   $('form').trigger('reset')
 }
 
@@ -23,8 +25,8 @@ const onSignInSuccess = responseData => {
   $('#artistList').removeClass('d-none')
   // console.log('success', responseData)
   // $('#createForHide').removeClass('d-none')
-  $('#message').removeClass('d-none')
-  $('#message').text("You're in! Welcome!")
+  $('#message').removeClass('d-none alert-success alert-danger')
+  $('#message').text("You're in! Welcome!").addClass('alert-success')
   $('#sign-out2').removeClass('d-none')
   $('#change-pw2').removeClass('d-none')
   $('#getArtists').removeClass('d-none')
@@ -43,21 +45,21 @@ const onSignInFailure = responseData => {
   // console.log('failure', responseData)
   $('#message').text('Sign in failed. Try Again!')
   $('#message').removeClass('d-none')
-  $('#message').addClass('failure')
+  $('#message').addClass('alert-danger')
   $('form').trigger('reset')
 }
 
 const onChangePasswordSuccess = () => {
   $('#message').text('Changed password successfully!')
   // $('#message').removeClass()
-  $('#message').addClass('success')
+  $('#message').addClass('alert-success')
   $('form').trigger('reset')
 }
 
 const onChangePasswordFailure = () => {
   $('#message').text('change password failed ')
   $('#message').removeClass()
-  $('#message').addClass('failure')
+  $('#message').addClass('alert-danger')
   $('form').trigger('reset')
 }
 
@@ -79,7 +81,7 @@ const onSignOutSuccess = () => {
 const onSignOutFailure = () => {
   $('#message').text('sign out failed ')
   // $('#message').removeClass()
-  $('#message').addClass('failure')
+  $('#message').addClass('alert-danger')
 }
 
 module.exports = {

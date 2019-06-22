@@ -4,6 +4,8 @@ body {
   background-image: url(https://cdn-images-1.medium.com/max/2600/0*o1QU-7dhjuNPNZUq.);
   background-size: cover;
   display: cover;
+  background-attachment: fixed;
+  padding-top: 70px
 }
 
 footer {
@@ -27,6 +29,11 @@ h3 {
   // text-shadow: 0 0 2px #000;
 }
 
+.artist {
+  background-color: rgba(255,255,255,.3);
+  border-radius: 3px
+}
+
 .addArtist {
   text-align: center;
   margin-top: 40px;
@@ -37,19 +44,27 @@ h3 {
   color: white;
 }
 
+.dropdown-menu {
+  min-width: 20em
+}
+
 .getArtists {
   text-align: center;
   padding: 20px;
 }
 
-#message {
-  text-align: center;
-  color: green;
+.navbar.bg-light.navbar-light {
+  background-color: rgba(255,255,255,.3) !important;
 }
 
-.remove-artist {
-  margin: 5px;
+#message {
+  text-align: center;
+  // color: green;
 }
+
+// .remove-artist {
+//   margin: 5px;
+// }
 
 #artist {
   align: center;
@@ -71,8 +86,4 @@ h3 {
 #sign-out2 {
   text-align: center;
   color: white;
-}
-
-#update-artist {
-  margin: 5px;
 }
