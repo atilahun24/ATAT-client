@@ -32,7 +32,8 @@ const onDeleteArtist = (event) => {
       // anonymous function
       // get artists reloads the list with the selected artist removed
     })
-    .catch(ui.onDeleteArtistFailure)
+    .then(ui.deleteArtistSuccess)
+    .catch(ui.deleteArtistFailure)
 }
 
 const onUpdateArtist = function (event) {
@@ -43,7 +44,8 @@ const onUpdateArtist = function (event) {
     .then(function (responseData) {
       onGetAllArtists(event)
     })
-    .catch(ui.onUpdateArtistFailure)
+    .then(ui.updateArtistSuccess)
+    .catch(ui.updateArtistFailure)
 }
 
 module.exports = {
