@@ -2,9 +2,9 @@
 
 const showArtistsTemplate = require('../templates/artists-display.handlebars')
 
-const getAllArtistsSuccess = function (responseData) {
+const getAllArtistsSuccess = function (responseData, txt) {
   $('#message').removeClass('d-none')
-  $('#message').text('Added Artists will be displayed below')
+  $('#message').text(txt)
   setTimeout(() => $('#message').addClass('d-none'), 8000)
   $('#artistList').text(JSON.stringify(responseData.artists))
   // console.log(responseData)
@@ -44,9 +44,9 @@ const deleteArtistFailure = function () {
 }
 
 const updateArtistSuccess = function (responseData) {
-  $('#message').removeClass('d-none')
   $('#message').text('You have updated your artist')
-  setTimeout(() => $('#message').addClass('d-none'), 2500)
+  $('#message').removeClass('d-none')
+  setTimeout(() => $('#message').addClass('d-none'), 3500)
   $('form').trigger('reset')
 }
 

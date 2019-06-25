@@ -15,7 +15,9 @@ $(() => {
   $('#change-pw').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('submit', authEvents.onSignOut)
   $('#create').on('submit', artistEvents.onAddNewArtist)
-  $('#getArtists').on('click', artistEvents.onGetAllArtists)
+  $('#getArtists').on('click', function (event) {
+    artistEvents.onGetAllArtists(event, 'Your favorite artists are displayed below')
+  })
   // $('#artistsList').on('click', artistEvents.onDeleteArtist)
   $('#artistList').on('click', '.remove-artist', artistEvents.onDeleteArtist)
   $('#artistList').on('submit', '.update-artist', artistEvents.onUpdateArtist)
