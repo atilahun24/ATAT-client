@@ -26,11 +26,15 @@ const onSignInSuccess = responseData => {
   // console.log('success', responseData)
   // $('#createForHide').removeClass('d-none')
   $('#message').removeClass('d-none alert-success alert-danger')
-  $('#message').text("You're in! Welcome!").addClass('alert-success')
+  $('#message').addClass('alert-success')
+
+  // $('#message').text("You're in! Welcome!").addClass('alert-success')
+  $('#message').text("You're In! Welcome!")
+  setTimeout(() => $('#message').addClass('d-none'), 2500)
   $('#sign-out2').removeClass('d-none')
   $('#change-pw2').removeClass('d-none')
   $('#getArtists').removeClass('d-none')
-  $('#sign-in2').addClass('d-none')
+  $('#signInNav').addClass('d-none')
   $('#sign-up2').addClass('d-none')
   $('form').trigger('reset')
   // whenever we sign in successfully, the user is returned in the response so we store it

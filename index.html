@@ -19,7 +19,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse" id="signInNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -84,8 +84,98 @@
         </ul>
     </div>
 
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Change Password
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <form class="px-4 py-3" id="sign-up">
+  <div class="form-group">
+    <label for="exampleDropdownFormEmail1">Email address</label>
+    <input type="email" class="form-control" name="credentials[email]" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+  </div>
+  <div class="form-group">
+    <label for="exampleDropdownFormPassword1">Password</label>
+    <input type="password" class="form-control" name="credentials[password]" id="exampleDropdownFormPassword11" placeholder="Create Password">
+  </div>
+  <div class="form-group">
+    <label for="exampleDropdownFormPassword2">Password</label>
+    <input type="password" class="form-control" id="exampleDropdownFormPassword1" name="credentials[password_confirmation]" placeholder="Confirm Your Password">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Sign Up</button>
+</form>
+          </div>
+        </li>
+      </ul>
+  </div>
+
+  <!-- <button id= "sign-out2 sign-out" type="submit" class="btn btn-danger d-none" value="Sign Out">Sign Out</button> -->
+
+  <div id = "sign-out2" class = "d-none btn btn-danger">
+  <form id="sign-out">
+    <input type="submit" value="Sign Out" />
+  </form>
+  </div>
 
     </nav>
+
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="#">AT</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Sign In
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <form class="px-4 py-3" id = "change-pw">
+    <div class="form-group">
+      <label for="exampleDropdownFormEmail1">Email address</label>
+      <input type="email" class="form-control" name="passwords[old]" id="exampleDropdownFormEmailone" placeholder="email@example.com">
+    </div>
+    <div class="form-group">
+      <label for="exampleDropdownFormPassword">Password</label>
+      <input type="password" class="form-control" name="passwords[new]" id="exampleDropdownFormPassword12" placeholder="Password">
+    </div>
+    <button type="submit" class="btn btn-primary">Sign in</button>
+          </form>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Sign Up
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <button type="submit" class="btn btn-primary">Sign Up</button>
+            </div>
+          </li>
+        </ul>
+    </div>
+
+
+    </nav> -->
 
 
   <div id="message" class="alert"></div>
@@ -127,7 +217,7 @@
 </div>
 
 <!-- <img src="public/atat logo.png" alt="logo" width="150" height="150" id="logo"> -->
-<h3>Artist Tracker
+<h3 id="headerWithLogo">Artist Tracker
 <img src="public/atat logo.png" alt="logo" width="140" height="140" id="logo">
 </h3>
 
