@@ -77,7 +77,7 @@ const onSignOutSuccess = () => {
   $('#change-pw2').addClass('d-none')
   $('#createForHide').addClass('d-none')
   $('#notification').addClass('d-none')
-  $('#sign-in2').removeClass('d-none')
+  $('#sign-inNav').removeClass('d-none')
   $('#sign-up2').removeClass('d-none')
   $('#endMessage').addClass('d-none')
 }
