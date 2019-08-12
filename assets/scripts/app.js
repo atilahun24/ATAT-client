@@ -12,7 +12,7 @@ $(() => {
   // your JS code goes here
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
-  $('#change-pw').on('submit', authEvents.onChangePassword)
+  $('#change-pwForm').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('submit', authEvents.onSignOut)
   $('#create').on('submit', artistEvents.onAddNewArtist)
   $('#getArtists').on('click', artistEvents.onGetAllArtists)
