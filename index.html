@@ -29,11 +29,11 @@
               <form class="px-4 py-3" id = "sign-in">
     <div class="form-group">
       <label for="exampleDropdownFormEmail1">Email address</label>
-      <input type="email" class="form-control" name="credentials[email]" id="exampleDropdownFormEmailone" placeholder="email@example.com">
+      <input type="email" class="form-control" required name="credentials[email]" id="exampleDropdownFormEmailone" placeholder="email@example.com">
     </div>
     <div class="form-group">
       <label for="exampleDropdownFormPassword">Password</label>
-      <input type="password" class="form-control" name="credentials[password]" id="exampleDropdownFormPassword12" placeholder="Password">
+      <input type="password" class="form-control" required name="credentials[password]" id="exampleDropdownFormPassword12" placeholder="Password">
     </div>
     <div class="form-group">
       <div class="form-check">
@@ -66,15 +66,15 @@
               <form class="px-4 py-3" id="sign-up">
     <div class="form-group">
       <label for="exampleDropdownFormEmail1">Email address</label>
-      <input type="email" class="form-control" name="credentials[email]" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+      <input type="email" class="form-control" required name="credentials[email]" id="exampleDropdownFormEmail1" placeholder="email@example.com">
     </div>
     <div class="form-group">
       <label for="exampleDropdownFormPassword1">Password</label>
-      <input type="password" class="form-control" name="credentials[password]" id="exampleDropdownFormPassword11" placeholder="Create Password">
+      <input type="password" class="form-control" required name="credentials[password]" id="exampleDropdownFormPassword11" placeholder="Create Password">
     </div>
     <div class="form-group">
       <label for="exampleDropdownFormPassword2">Password</label>
-      <input type="password" class="form-control" id="exampleDropdownFormPassword1" name="credentials[password_confirmation]" placeholder="Confirm Your Password">
+      <input type="password" class="form-control" required id="exampleDropdownFormPassword1" name="credentials[password_confirmation]" placeholder="Confirm Your Password">
     </div>
 
     <button type="submit" class="btn btn-primary">Sign Up</button>
@@ -100,11 +100,11 @@
             <form class="px-4 py-3" id="change-pwForm">
   <div class="form-group">
     <label for="exampleDropdownFormPassword1"> Old Password</label>
-    <input type="password" class="form-control" name="passwords[old]" placeholder="Old Password">
+    <input type="password" class="form-control" name="passwords[old]" required placeholder="Old Password">
   </div>
   <div class="form-group">
     <label for="exampleDropdownFormPassword2">Password</label>
-    <input type="password" class="form-control" name="passwords[new]" placeholder="New Password">
+    <input type="password" class="form-control" name="passwords[new]" required placeholder="New Password">
   </div>
 
   <button type="submit" class="btn btn-primary">Submit</button>

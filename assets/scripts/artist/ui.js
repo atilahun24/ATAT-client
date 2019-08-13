@@ -10,7 +10,10 @@ const getAllArtistsSuccess = function (responseData) {
 }
 
 const addNewArtistSuccess = function (responseData) {
+  $('#message').removeClass('d-none')
+  // $('#message').text("You've added " + responseData.artist.name + ' to your favorite artists!')
   $('#message').text("You've added " + responseData.artist.name + ' to your favorite artists!')
+  setTimeout(() => $('#message').addClass('d-none'), 3500)
   $('form').trigger('reset')
 }
 
