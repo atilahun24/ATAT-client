@@ -6,16 +6,20 @@ const onSignUpSuccess = responseData => {
   // console.log('success', responseData)
   $('#message').removeClass('d-none alert-success alert-danger')
   // $('#message').removeClass('d-none')
-  $('#message').text('You have successfully signed up!')
+  // $('#message').text('You have successfully signed up!')
+  $('#message').addClass('alert-success')
+  $('#message').text("You're signed up! Sign in to continue")
+  setTimeout(() => $('#message').addClass('d-none'), 3000)
   $('form').trigger('reset')
   $('#sign-up2').addClass('d-none')
+  $('#signinNav').removeClass('d-none')
 }
 
 const onSignUpFailure = responseData => {
   // console.log('failure', responseData)
   $('#message').removeClass('d-none alert-success alert-danger')
   // $('#message').removeClass('d-none')
-  $('#message').text('Sign up failed :( ').addClass('alert-danger')
+  $('#message').text('Sign up failed').addClass('alert-danger')
   $('form').trigger('reset')
 }
 
@@ -54,9 +58,11 @@ const onSignInFailure = responseData => {
 }
 
 const onChangePasswordSuccess = () => {
-  $('#message').text('Changed password successfully!')
-  // $('#message').removeClass()
+  $('#message').removeClass('d-none')
   $('#message').addClass('alert-success')
+  $('#message').text('Your password has been changed')
+  setTimeout(() => $('#message').addClass('d-none'), 2500)
+  // $('#message').text('Changed password successfully!')
   $('form').trigger('reset')
 }
 
@@ -68,6 +74,7 @@ const onChangePasswordFailure = () => {
 }
 
 const onSignOutSuccess = () => {
+  $('#message').removeClass('d-none')
   $('#getAllArtists').addClass('d-none')
   $('#hideAddArtist').addClass('d-none')
   $('#artistList').addClass('d-none')
@@ -75,11 +82,12 @@ const onSignOutSuccess = () => {
   setTimeout(() => $('#message').addClass('d-none'), 2500)
   $('#sign-out2').addClass('d-none')
   $('#change-pw2').addClass('d-none')
-  $('#createForHide').addClass('d-none')
-  $('#notification').addClass('d-none')
-  $('#sign-inNav').removeClass('d-none')
+  $('#signInNav').removeClass('d-none')
   $('#sign-up2').removeClass('d-none')
-  $('#endMessage').addClass('d-none')
+  $('#artistList').html('')
+  // $('#createForHide').addClass('d-none')
+  // $('#notification').addClass('d-none')
+  // $('#endMessage').addClass('d-none')
 }
 
 const onSignOutFailure = () => {

@@ -100,11 +100,11 @@
             <form class="px-4 py-3" id="change-pwForm">
   <div class="form-group">
     <label for="exampleDropdownFormPassword1"> Old Password</label>
-    <input type="password" class="form-control" name="password[old]" placeholder="Old Password">
+    <input type="password" class="form-control" name="passwords[old]" placeholder="Old Password">
   </div>
   <div class="form-group">
     <label for="exampleDropdownFormPassword2">Password</label>
-    <input type="password" class="form-control" name="password[new]" placeholder="New Password">
+    <input type="password" class="form-control" name="passwords[new]" placeholder="New Password">
   </div>
 
   <button type="submit" class="btn btn-primary">Submit</button>
@@ -223,15 +223,15 @@
 
   <div class ="addArtist d-none" id="hideAddArtist">
     <form id ="create">
-      <input type="text" name="artist[name]" placeholder="Artist Name" />
-      <input type="text" name="artist[genre]" placeholder="Genre" />
-      <input type="submit" value="Add New Artist" />
+      <input type="text" required name="artist[name]" placeholder="Artist Name" />
+      <input type="text" required name="artist[genre]" placeholder="Genre" />
+      <input type="submit" class="btn btn-light" value="Add New Artist" />
     </form>
   </div>
 
   <div class ="getArtists d-none" id="getAllArtists">
     <form id ="getArtists">
-      <input type="submit" value="Get All Artists" />
+      <input type="submit" class="btn btn-success" value="Get All Artists" />
     </form>
   </div>
 
