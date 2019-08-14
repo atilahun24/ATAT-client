@@ -18,8 +18,9 @@ const onSignUpSuccess = responseData => {
 const onSignUpFailure = responseData => {
   // console.log('failure', responseData)
   $('#message').removeClass('d-none alert-success alert-danger')
-  // $('#message').removeClass('d-none')
-  $('#message').text('Sign up failed').addClass('alert-danger')
+  $('#message').addClass('alert-danger')
+  $('#message').text('Sign up failed :( ')
+  setTimeout(() => $('#message').addClass('d-none'), 2500)
   $('form').trigger('reset')
 }
 
@@ -27,14 +28,14 @@ const onSignInSuccess = responseData => {
   $('#getAllArtists').removeClass('d-none')
   $('#hideAddArtist').removeClass('d-none')
   $('#artistList').removeClass('d-none')
-  // console.log('success', responseData)
+  // //console.log('success', responseData)
   // $('#createForHide').removeClass('d-none')
   $('#message').removeClass('d-none alert-success alert-danger')
   $('#message').addClass('alert-success')
 
   // $('#message').text("You're in! Welcome!").addClass('alert-success')
   $('#message').text("You're In! Welcome!")
-  setTimeout(() => $('#message').addClass('d-none'), 2500)
+  setTimeout(() => $('#message').addClass('d-none'), 2800)
   $('#sign-out2').removeClass('d-none')
   $('#change-pw2').removeClass('d-none')
   $('#getArtists').removeClass('d-none')
@@ -46,19 +47,21 @@ const onSignInSuccess = responseData => {
   // 'responseData.user' contains 'responseData.user.token'
 
   store.user = responseData.user
-  // console.log('store is', store)
+  // //console.log('store is', store)
 }
 
 const onSignInFailure = responseData => {
-  // console.log('failure', responseData)
-  $('#message').text('Sign in failed. Try Again!')
-  $('#message').removeClass('d-none')
+  // //console.log('failure', responseData)
+  $('#message').removeClass('d-none alert-success alert-danger')
   $('#message').addClass('alert-danger')
+  $('#message').text('Sign in failed. Try Again!')
+  setTimeout(() => $('#message').addClass('d-none'), 2500)
+  // $('#message').addClass('failure')
   $('form').trigger('reset')
 }
 
 const onChangePasswordSuccess = () => {
-  $('#message').removeClass('d-none')
+  $('#message').removeClass('d-none alert-success alert-danger')
   $('#message').addClass('alert-success')
   $('#message').text('Your password has been changed')
   setTimeout(() => $('#message').addClass('d-none'), 2500)
@@ -67,17 +70,20 @@ const onChangePasswordSuccess = () => {
 }
 
 const onChangePasswordFailure = () => {
+  $('#message').removeClass('d-none alert-success alert-danger')
   $('#message').text('change password failed ')
-  $('#message').removeClass()
+  setTimeout(() => $('#message').addClass('d-none'), 2500)
+  // $('#message').removeClass()
   $('#message').addClass('alert-danger')
   $('form').trigger('reset')
 }
 
 const onSignOutSuccess = () => {
-  $('#message').removeClass('d-none')
+  $('#message').removeClass('d-none alert-success alert-danger')
   $('#getAllArtists').addClass('d-none')
   $('#hideAddArtist').addClass('d-none')
   $('#artistList').addClass('d-none')
+  $('#artistList').html('')
   $('#message').text('Goodbye for now 👋')
   setTimeout(() => $('#message').addClass('d-none'), 2500)
   $('#sign-out2').addClass('d-none')
@@ -91,7 +97,9 @@ const onSignOutSuccess = () => {
 }
 
 const onSignOutFailure = () => {
-  $('#message').text('sign out failed ')
+  $('#message').removeClass('d-none alert-success alert-danger')
+  $('#message').text('Sign Out Failed')
+  setTimeout(() => $('#message').addClass('d-none'), 2500)
   // $('#message').removeClass()
   $('#message').addClass('alert-danger')
 }

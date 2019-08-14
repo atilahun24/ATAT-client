@@ -1,3 +1,4 @@
+
 Artist Tracker is an app that helps you keep track of your favorite artists. In
 the future, hopefully it will also be able to display your artist's tour schedule
 

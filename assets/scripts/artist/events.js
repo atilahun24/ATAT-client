@@ -4,22 +4,26 @@ const getFormFields = require('../../../lib/get-form-fields.js')
 const api = require('./api.js')
 const ui = require('./ui')
 
-const onAddNewArtist = event => {
+const onAddNewArtist = (event) => {
   event.preventDefault()
 
   const form = event.target
   const formData = getFormFields(form)
 
-  // console.log('add artist pressed', formData)
+  // //console.log('add artist pressed', formData)
   api.addNewArtist(formData)
-    .then(ui.addNewArtistSuccess)
+    .then(data => {
+      ui.addNewArtistSuccess(data)
+    })
     .catch(ui.addNewArtistFailure)
 }
 
-const onGetAllArtists = function (event) {
+const onGetAllArtists = function (event, txt) {
   event.preventDefault()
   api.getAllArtists()
-    .then(ui.getAllArtistsSuccess)
+    .then(data => {
+      ui.getAllArtistsSuccess(data, txt)
+    })
     .catch(ui.getAllArtistsFailure)
 }
 
@@ -28,11 +32,12 @@ const onDeleteArtist = (event) => {
   const id = $(event.target).data('id')
   api.deleteArtist(id)
     .then(function () {
-      onGetAllArtists(event)
+      onGetAllArtists(event, 'You have deleted an artist')
       // anonymous function
       // get artists reloads the list with the selected artist removed
     })
-    .catch(ui.onDeleteArtistFailure)
+    // .then(ui.deleteArtistSuccess)
+    .catch(ui.deleteArtistFailure)
 }
 
 const onUpdateArtist = function (event) {
@@ -41,9 +46,10 @@ const onUpdateArtist = function (event) {
   const formData = getFormFields(event.target)
   api.updateArtist(id, formData)
     .then(function (responseData) {
-      onGetAllArtists(event)
+      onGetAllArtists(event, 'You have updated your artist')
     })
-    .catch(ui.onUpdateArtistFailure)
+    // .then(ui.updateArtistSuccess)
+    .catch(ui.updateArtistFailure)
 }
 
 module.exports = {

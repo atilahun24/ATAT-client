@@ -1,7 +1,7 @@
 @import '~bootstrap/scss/bootstrap';
 
 body {
-  background-image: url(https://cdn-images-1.medium.com/max/2600/0*o1QU-7dhjuNPNZUq.);
+  background-image: url("https://cdn-images-1.medium.com/max/2600/0*o1QU-7dhjuNPNZUq.");
   background-size: cover;
   display: cover;
   background-attachment: fixed;
@@ -32,6 +32,10 @@ h3 {
 .artist {
   background-color: rgba(255,255,255,.3);
   border-radius: 3px
+
+// ul {
+ // list-style: none;
+  // padding: 0;
 }
 
 .addArtist {
@@ -51,6 +55,7 @@ h3 {
 .getArtists {
   text-align: center;
   padding: 20px;
+  // overflow: auto;
 }
 
 .navbar.bg-light.navbar-light {
@@ -83,6 +88,7 @@ h3 {
 #message {
   text-align: center;
   max-width: 400px;
+  text-shadow: -1.5px 0 white, 0 1.5px white, 1.5px 0 white, 0 -1.5px white;
   // color: green;
 }
 
