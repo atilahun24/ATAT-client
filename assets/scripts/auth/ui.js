@@ -60,14 +60,14 @@ const onSignInFailure = responseData => {
 const onChangePasswordSuccess = () => {
   $('#message').removeClass('d-none')
   $('#message').addClass('alert-success')
-  $('#message').text('Your password has been changed')
+  $('#message').text('You have succesffully changed your password')
   setTimeout(() => $('#message').addClass('d-none'), 2500)
   // $('#message').text('Changed password successfully!')
   $('form').trigger('reset')
 }
 
 const onChangePasswordFailure = () => {
-  $('#message').text('change password failed ')
+  $('#message').text('change password failed')
   $('#message').removeClass()
   $('#message').addClass('alert-danger')
   $('form').trigger('reset')
@@ -78,7 +78,7 @@ const onSignOutSuccess = () => {
   $('#getAllArtists').addClass('d-none')
   $('#hideAddArtist').addClass('d-none')
   $('#artistList').addClass('d-none')
-  $('#message').text('Goodbye for now 👋')
+  $('#message').text('Come back soon!👋')
   setTimeout(() => $('#message').addClass('d-none'), 2500)
   $('#sign-out2').addClass('d-none')
   $('#change-pw2').addClass('d-none')
